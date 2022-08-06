@@ -138,7 +138,7 @@ function App() {
             aria-describedby="alert-dialog-description"
           >
             <DialogTitle id="alert-dialog-title">
-              {"Confirm dialog"}
+              {"Confirm removement"}
             </DialogTitle>
             <DialogContent>
               <DialogContentText id="alert-dialog-description">
