@@ -1,0 +1,70 @@
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 12px;
+        font-weight: 500;
+
+    }
+
+    .App {
+        background-color: #EFD9D1;
+    }
+
+    #darkModeApp {
+        background-color: #0F0E0E;
+    }
+
+    .wrapper {
+        width: auto;
+        border: none;
+        border-radius: 0;
+        padding: 20px 30px;
+        margin: 0;
+        overflow-y: scroll;
+    }
+
+    input {
+        transition: none;
+        width: 70%;
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 20px;
+    }
+
+    input:focus {
+        width: 70%;
+    }
+
+    /* update */
+    .updateForm {
+        width: auto;
+        height: auto;
+        padding: 10px 15px;
+    }
+    .lable {
+        font-size: 20px;
+    }
+    #close_icon {
+        float: right;
+        font-size: 40px;
+    }
+    #darkModeWrapper {
+        background-color: #0F0E0E;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    input:focus {
+        width: 78%;
+    }
+
+    .wrapper {
+        width: 70%;
+        overflow-y: scroll;
+    }
+
+    #darkModeWrapper {
+        background-color: #0F0E0E;
+    }
+}

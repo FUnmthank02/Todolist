@@ -1,0 +1,183 @@
+.App  {
+  display: flex;
+  justify-content: center;
+  background-color: #D8AC9C;
+  min-height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.brand{
+  color: #0E185F;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.wrapper {
+  background-color: #EFD9D1;
+  width: 50vw;
+  border-radius: 15px;
+  padding: 20px 30px;
+  margin: 30px auto;
+}
+li {
+  border-bottom: 1px solid #fff;
+  width: fit-content;
+  color: #fff;
+  font-size: 23px;
+}
+button, input {
+  font-size: 25px;
+  background-color: aliceblue;
+  border: 1px solid rgb(47, 151, 241);
+  border-radius: 10px;
+  margin-left: 6px;
+  padding: 6px;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #D4B5FF;
+  color: #fff;
+  opacity: 0.9;
+}
+label{
+  font-size: 23px;
+}
+input {
+  margin-left: 0;
+  margin-top: 10px;
+}
+.modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #D8AC9C;
+  z-index: 2;
+}
+#close_icon {
+  float: right;
+  font-size: 50px;
+}
+#close_icon:hover {
+  cursor: pointer;
+  color: #3BACB6;
+}
+.updateForm {
+  background-color: #EFD9D1;
+  width: 50vw;
+  height: 30vh;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px 30px;
+  margin: auto;
+  z-index: 2;
+}
+.form_edit {
+  clear: right;
+}
+#error {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 8px;
+  color: red;
+}
+.action {
+  display: flex;
+}
+.action h2 {
+  margin-left: 15px;
+}
+.contain_job {
+  margin-top: 10px;
+}
+.eachJob {
+  display: flex;
+  border-bottom: #737574 1px solid;
+  padding: 0 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.eachJob:hover {
+  background-color: #96D6FF;
+  color: #fff;
+  border-color: transparent;
+  opacity: 0.9;
+}
+
+.action_btn:hover {
+  cursor: pointer;
+  color: #a776eb;
+}
+.job{
+  font-weight: 500;
+  max-width: 40vw;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+.lable {
+  font-weight: 500;
+}
+input {
+    margin: 20px 0;
+    font-weight: 500;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    width: 70%;
+    transition: width .7s ease-in-out;
+}
+input:focus {
+    outline: none;
+    border:1px solid #04AA6D;
+    box-shadow: 0 0 10px lightblue;
+    width: 80%;
+}
+
+.Mode {
+  display: flex;
+  cursor: pointer;
+}
+#darkModeBrand {
+  color: #CFFFDC;
+}
+#darkModeWrapper {
+  background-color: #161616;
+}
+#darkModeApp {
+  background-color: #121212;
+}
+#darkModeWrapper .job, #darkModeWrapper .lable, #darkModeWrapper .action_btn{
+  color: #fff !important;
+}
+#darkModeWrapper .action_btn:hover {
+  color: #FF5D5D !important;
+}
+#darkModeWrapper .eachJob:hover {
+  background-color: #9A86A4;
+  opacity: 1;
+}
+#darkModeWrapper input:focus , #darkModeModal input:focus{
+  box-shadow: 0 0 10px #F73D93;
+  border:1px solid #570A57;
+}
+#darkModeWrapper .btn:hover , #darkModeModal .btn:hover{
+  background-color: #FF5D5D;
+}
+#darkModeModal {
+  background-color: #121212;
+}
+#darkModeModal .updateForm {
+  background-color: #0F0E0E;
+  border: 1px solid #FBC5C5;
+  color: #fff;
+}
+#darkModeModal #h2 {
+  color: red !important;
+}
