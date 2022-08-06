@@ -12,9 +12,9 @@ import { DialogContentText } from '@mui/material';
 import { DialogTitle } from '@mui/material';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import LightModeIcon from '@mui/icons-material/LightMode';
+
 function App() {
   const [job, setJob] = useState('')
-  const [validate, setValidate] = useState(false)
   const [APIData, setAPIData] = useState([])
   const [id, setID] = useState(null)
   const [noti, setNoti] = useState(false)
@@ -53,15 +53,11 @@ function App() {
   //add
   const handleAdd = e => {
     e.preventDefault()
-    if (job.localeCompare('') !== 0) {
-      postData()
-      setJob('')
-      setValidate(false)
-      setNoti(true)
-      notify()
-    } else {
-      setValidate(true)
-    }
+    postData()
+    setJob('')
+    setNoti(true)
+    notify()
+
   }
 
   //delete by id
@@ -99,15 +95,12 @@ function App() {
   //handle update 
   const handleUpdate = e => {
     e.preventDefault()
-    if (job.localeCompare('') !== 0) {
-      updateData()
-      setJob('')
-      setNoti(true)
-      notify()
-      setAppearUpdate(false)
-    } else {
-      setValidate(true)
-    }
+    updateData()
+    setJob('')
+    setNoti(true)
+    notify()
+    setAppearUpdate(false)
+
   }
 
   // open confirm box
@@ -127,6 +120,7 @@ function App() {
     handleClose()
   }
 
+  // change mode
   const handleChangeMode = () => {
     setLightMode(!lightMode)
   }
@@ -166,9 +160,8 @@ function App() {
             <div id="close_icon" onClick={() => setAppearUpdate(false)}>&times;</div>
             <form onSubmit={handleUpdate} className="form_edit">
               <label className="lable">Type things to update information</label><br />
-              <input value={job} placeholder="Enter here" onChange={(e) => setJob(e.target.value)} />
+              <input value={job} placeholder="Enter here" onChange={(e) => setJob(e.target.value)} required />
               <button className="btn">Update</button>
-              {validate && <h4 id='h2'>You must type to update!</h4>}
             </form>
           </div>
         </div>
@@ -179,23 +172,23 @@ function App() {
         <Grid item xs={12} md={12}>
           <div className="header">
             <div><h1 className="brand" id={!lightMode && "darkModeBrand"}>ThanhNM</h1></div>
-          {lightMode ?
-            <div className="Mode" onClick={handleChangeMode}>
-              <NightlightIcon fontSize="large" />
-            </div>
-            :
-            <div className="Mode" onClick={handleChangeMode}>
-              <LightModeIcon color="success" fontSize="large" />
-            </div>
-          }
+            {lightMode ?
+              <div className="Mode" onClick={handleChangeMode}>
+                <NightlightIcon htmlColor="#0E185F" fontSize="large" />
+              </div>
+              :
+              <div className="Mode" onClick={handleChangeMode}>
+                <LightModeIcon htmlColor="#CFFFDC" fontSize="large" />
+              </div>
+            }
           </div>
           <div className="wrapper" id={!lightMode && "darkModeWrapper"}>
-            <label className="lable">Type things to add to todolist</label>
-            <br />
-            <input value={job} placeholder="Enter here" onChange={e => setJob(e.target.value)} />
-            <button className="btn" onClick={handleAdd}>Add</button>
-            {validate && <h4 id='error'>You must type to add!</h4>}
-
+            <form onSubmit={handleAdd}>
+              <label className="lable">Type things to add to todolist</label>
+              <br />
+              <input value={job} placeholder="Enter here" onChange={e => setJob(e.target.value)} required />
+              <button className="btn">Add</button>
+            </form>
             <div className="contain_job">
               {APIData.map((data, index) => (
                 <div className="eachJob" key={index}>

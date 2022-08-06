@@ -148,10 +148,10 @@ input:focus {
   color: #CFFFDC;
 }
 #darkModeWrapper {
-  background-color: #161616;
+  background-color: #191919;
 }
 #darkModeApp {
-  background-color: #121212;
+  background-color: #202020;
 }
 #darkModeWrapper .job, #darkModeWrapper .lable, #darkModeWrapper .action_btn{
   color: #fff !important;
@@ -177,7 +177,4 @@ input:focus {
   background-color: #0F0E0E;
   border: 1px solid #FBC5C5;
   color: #fff;
-}
-#darkModeModal #h2 {
-  color: red !important;
 }
